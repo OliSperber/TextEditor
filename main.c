@@ -5,7 +5,7 @@
 #include <conio.h>
 
 int main(int argc, char *argv[]) {
-    // Checking if file is passed as arguments
+    // Checking if file is passed as argument
     if (argc != 2) {
         printf("ERROR: Geen bestandsnaam gegeven");
         return 1;
