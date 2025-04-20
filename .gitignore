@@ -1,0 +1,5 @@
+# Ignore compiled binaries
+*.exe
+
+# Ignore specific files
+compile_flags.txt
