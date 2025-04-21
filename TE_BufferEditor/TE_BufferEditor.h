@@ -1,9 +1,12 @@
 #ifndef TE_BUFFEREDITOR_H
 #define TE_BUFFEREDITOR_H
 
-char** TEXTBUFFER;
+#include <stdio.h>
 
-void BUFFEREDITOR_LoadFullBuffer();
+extern char** TEXTBUFFER;
+extern int LINESCOUNT;
+
+void BUFFEREDITOR_LoadFullBuffer(FILE* file);
 
 void BUFFEREDITOR_InsertChar(char c);
 void BUFFEREDITOR_InsertEnter();
