@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
     FILEMANAGER_LoadFile();
 
     // Setting curson to left up corner
-    UI_MoveCursor(0, 0);
+    UI_MoveCursorRaw(0, 0);
 
     // Starting receiving input;
     INPUTHANDLER_StartDetectingInput();

@@ -14,8 +14,10 @@ void INPUTHANDLER_StartDetectingInput(){
         c = _getch();
 
         // Handling arrow keys
-        if (c == 0 || c == 224) {
+        if (c == 0 || c == 224 || c == -32) {
+
             char arrow = _getch();
+
             switch (arrow) {
                 case 72: // up
                     UI_MoveCursorUp();
@@ -38,6 +40,7 @@ void INPUTHANDLER_StartDetectingInput(){
                     FILEMANAGER_SaveFile();
                     break;
                 case 17: // ctrl + q
+                    UI_ClearScreen();
                     detecting = false;
                     break;
                 case '\r': // Enter
