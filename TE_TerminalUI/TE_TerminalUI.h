@@ -8,8 +8,7 @@ extern int UI_CURSOR_PREFERRED_COLUMN;
 void UI_Load();
 
 void UI_LoadLine(int row);
-void UI_DeleteLine(int row);
-void UI_AddLine(int row);
+void UI_DeleteLine(int row, int width);
 
 void UI_MoveCursorRaw(int row, int col);
 void UI_MoveCursor();

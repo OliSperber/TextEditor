@@ -3,6 +3,7 @@
 #include "TE_TerminalUI.h"
 #include "TE_FileManager.h"
 
+#include <ctype.h>
 #include <conio.h>
 #include <stdbool.h>
 
@@ -51,7 +52,8 @@ void INPUTHANDLER_StartDetectingInput(){
                     BUFFEREDITOR_InsertBackspace();
                     break;
                 default: // Insertng given char
-                    BUFFEREDITOR_InsertChar(c);
+                    if(isprint(c))
+                        BUFFEREDITOR_InsertChar(c);
                     break;
             }
         }
